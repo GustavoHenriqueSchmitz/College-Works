@@ -6,59 +6,92 @@ import src.Vault.Vault;
 public class Main {
     public static void main(String[] args) {
         Scanner keyboard_listener = new Scanner(System.in);
-        System.out.println("----- Sistema de Cofre de Moedas -----\n");
+        System.out.println("----- Sistema de Cofre de Moedas -----");
 
         Vault vault = new Vault();
         boolean running = true;
         while (running) {
             System.out.println("|=| O que deseja fazer com seu cofre? |=|");
-            System.out.println("1 - Adicionar moeda");
-            System.out.println("2 - Remover moeda");
-            System.out.println("3 - Listar todas as moedas");
-            System.out.println("4 - Calcular valor total do cofre em reais");
-            System.out.println("5 - Fechar cofre");
+
+            String[] options = new String[]{
+                "Adicionar moeda", "Remover moeda", "Listar todas as moedas",
+                "Calcular valor total do cofre em reais", "Fechar cofre"
+            };
+            for (int i = 0; i < options.length; i++) {
+                System.out.println((i + 1) + " - " + options[i]);
+            }
             
-            System.out.print("Opção: ");
-            int option = keyboard_listener.nextInt();
+            int option;
+            try {
+                System.out.print("Opção: ");
+                option = keyboard_listener.nextInt();
+            } catch (Exception error) {
+                System.out.println("Erro! Por favor escolha uma opção válida.");
+                keyboard_listener.next();
+                continue;
+            }
             
             switch (option) {
                 case 1:
                     System.out.println("\n");
                     System.out.println("|=| Qual moeda deseja adicionar? |=|");
-                    System.out.println("1 - Real");
-                    System.out.println("2 - Dolar");
-                    System.out.println("3 - Euro");
-                    System.out.println("4 - Retornar");
 
-                    vault.addCoin(null);
+                    options = new String[]{"Real", "Dolar", "Euro", "Retornar"};
+                    for (int i = 0; i < options.length; i++) {
+                        System.out.println((i + 1) + " - " + options[i]);
+                    }
+
+                    try {
+                        System.out.print("Opção: ");
+                        option = keyboard_listener.nextInt();
+                    } catch (Exception error) {
+                        System.out.println("Erro! Por favor escolha uma opção válida.");
+                        keyboard_listener.next();
+                        continue;
+                    }
+
+                    if (option < 1 || option > 4) {
+                        System.out.println("A opção " + option + " não existe, por favor escolha uma opção válida.");
+                        continue;
+                    }
+                    else if (option == 4) {
+                        System.out.println("Retornando ao menu principal...");
+                        break;
+                    }
+                    
+                    double value;
+                    try {
+                        System.out.print("Valor em " + options[option - 1] + " a ser adicionado: ");
+                        value = keyboard_listener.nextDouble();
+                    } catch (Exception error) {
+                        System.out.println("Erro! Por favor escolha uma opção válida.");
+                        keyboard_listener.next();
+                        continue;
+                    }
+
+                    vault.addCoin(value, option);
                     break;
                 
                 case 2:
-                    System.out.println("\n");
                     vault.removeCoin(null);
                     break;
                 
                 case 3:
-                    System.out.println("\n");
                     vault.listCoins();
                     break;
 
                 case 4:
-                    System.out.println("\n");
                     vault.calculateVaultValue();
                     break;
                 
                 case 5:
-                    System.out.println("\n");
                     System.out.println("Fechando cofre...");
                     System.out.println("Cofre fechado com sucesso!");
                     running = false;
                     break;
             
                 default:
-                    System.out.println("\n");
                     System.out.println("A opção " + option + " não existe, por favor escolha uma opção válida.");
-                    System.out.println("\n");
                     break;
             }
         }
