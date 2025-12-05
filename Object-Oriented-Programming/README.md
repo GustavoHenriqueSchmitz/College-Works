@@ -2,7 +2,7 @@
 
 Este projeto é uma implementação em Java de um sistema de "Cofrinho", desenvolvido como Atividade Prática para a disciplina de Programação Orientada a Objetos.
 
-## 📋 Funcionalidades
+## Funcionalidades
 
 O sistema permite interagir com um cofre virtual através de um menu de console, oferecendo as seguintes opções:
 
@@ -11,13 +11,13 @@ O sistema permite interagir com um cofre virtual através de um menu de console,
 3.  **Listar Moedas:** Exibe todas as moedas armazenadas com seus respectivos valores formatados.
 4.  **Calcular Total:** Converte o valor de todas as moedas estrangeiras para Real e exibe o montante total acumulado.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Linguagem:** Java
 - **Versão Recomendada:** Java 25 (LTS) ou superior.
 - **IDE/Editor:** VS Code
 
-## 🚀 Como Executar
+## Como Executar
 
 O projeto está estruturado dentro do pacote `src`. Para executá-lo via terminal, siga os passos abaixo:
 
