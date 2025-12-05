@@ -12,49 +12,37 @@ public abstract class Coin {
 }
 
 class Dolar extends Coin {
-    public Dolar(double value) {
-        super(value);
-    }
+    public Dolar(double value) { super(value); }
 
     @Override
     public void info() {
-        System.out.println("Dolar - " + value);
+        System.out.printf("Dolar - US$ %.2f%n", value);
     }
 
     @Override
-    public double convert() {
-        return value * 5.2;
-    }
+    public double convert() { return value * 5.2; }
 }
 
 class Euro extends Coin {
-    public Euro(double value) {
-        super(value);
-    }
+    public Euro(double value) { super(value); }
 
     @Override
     public void info() {
-        System.out.println("Euro - " + value);
+        System.out.printf("Euro  - € %.2f%n", value);
     }
 
     @Override
-    public double convert() {
-        return value * 6.1;
-    }
+    public double convert() { return value * 6.1; }
 }
 
 class Real extends Coin {
-    public Real(double value) {
-        super(value);
-    }
+    public Real(double value) { super(value); }
 
     @Override
     public void info() {
-        System.out.println("Real - " + value);
+        System.out.printf("Real  - R$ %.2f%n", value);
     }
 
     @Override
-    public double convert() {
-        return value * 1.0;
-    }
+    public double convert() { return value * 1.0; }
 }
