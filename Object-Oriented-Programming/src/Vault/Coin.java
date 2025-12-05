@@ -1,5 +1,6 @@
 package src.Vault;
 
+// Classe abstrata 'Coin' (Moeda) que serve de modelo para todas as moedas.
 public abstract class Coin {
     public double value;
 
@@ -11,6 +12,7 @@ public abstract class Coin {
     public abstract double convert();
 }
 
+// Subclasse Dolar herdando de Coin
 class Dolar extends Coin {
     public Dolar(double value) { super(value); }
 
@@ -23,6 +25,7 @@ class Dolar extends Coin {
     public double convert() { return value * 5.2; }
 }
 
+// Subclasse Euro herdando de Coin
 class Euro extends Coin {
     public Euro(double value) { super(value); }
 
@@ -35,6 +38,7 @@ class Euro extends Coin {
     public double convert() { return value * 6.1; }
 }
 
+// Subclasse Real herdando de Coin
 class Real extends Coin {
     public Real(double value) { super(value); }
 
