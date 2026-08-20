@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# dados gerados em tempo de execução
+produtos.csv
+movimentacoes.csv

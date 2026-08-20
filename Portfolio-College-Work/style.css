@@ -1,0 +1,316 @@
+/* Reset global e configurações de comportamento de rolagem */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Permite transição suave entre âncoras */
+}
+
+/* Definição de variáveis de cores para reutilização */
+:root {
+    --bg-color: #161b22;
+    --bg-darker: #0d1117;
+    --text-main: #c9d1d9;
+    --text-title: #ffffff;
+    --accent: #00e5ff;
+    --card-bg: #21262d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Estilização da barra de navegação fixa */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(13, 17, 23, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--accent);
+    z-index: 1000;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Configuração base das seções de conteúdo */
+.section {
+    padding: 100px 20px 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Classe para fundo com tom mais escuro */
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+/* Container para centralização e limitação de largura */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1, h2, h3 { 
+    color: var(--text-title); 
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.container h1 { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+}
+
+.container h2 { 
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block; 
+    margin-bottom: 30px;
+}
+
+.container h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Ajustes de espaçamento para o bloco de educação */
+.education-block {
+    margin-bottom: 10px;
+}
+
+.education-block h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.education-block ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 30px; 
+}
+
+/* Layout em grid para as habilidades tecnológicas */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px; 
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 12px 10px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-icon { 
+    width: 35px; 
+    height: 35px; 
+    object-fit: contain; 
+}
+
+/* Layout em grid para os cards de projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 10px; 
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-top: 0; 
+    margin-bottom: 10px;
+}
+
+/* Estilização base para botões e links de ação */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+.btn:hover, .btn-submit:hover { 
+    background-color: var(--accent); 
+    color: var(--bg-color); 
+}
+
+/* Configurações do formulário de contato */
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    max-width: 600px; 
+    margin-top: 20px; 
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid #30363d;
+    color: var(--text-main);
+    border-radius: 4px;
+    margin-top: 5px; 
+}
+
+/* Estilo específico para o botão de envio do formulário */
+.btn-submit {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilização do botão hambúrguer (oculto no desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+/* ============================================================
+   SEÇÃO DE RESPONSIVIDADE (MEDIA QUERIES)
+============================================================ */
+
+@media (max-width: 768px) {
+    /* Ajuste da Navegação para o menu hambúrguer */
+    nav {
+        flex-direction: row;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Oculta a lista de links por padrão e prepara para o dropdown */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(13, 17, 23, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--accent);
+        display: none; /* Escondido */
+        margin-top: 0;
+    }
+
+    /* Classe ativada via JavaScript para mostrar o menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Animação do botão hambúrguer transformando em 'X' */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Ajuste de tipografia */
+    .container h1 {
+        font-size: 2.2rem;
+    }
+
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Redução de padding das seções para aproveitar melhor o espaço */
+    .section {
+        padding: 120px 15px 40px;
+    }
+
+    /* Ajuste do Grid de Skills para 2 colunas em telas muito pequenas */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    /* Ajuste do formulário */
+    .contact-form {
+        max-width: 100%;
+    }
+}

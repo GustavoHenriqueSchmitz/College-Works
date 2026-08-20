@@ -1,0 +1,130 @@
+<!-- Define que este documento é um arquivo HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gustavo Henrique Schmitz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <!-- Logo do site -->
+        <img src="./public/gs-icon.png" alt="Logo" class="logo">
+        
+        <!-- Ícone do menu hambúrguer para mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Lista de links de navegação interna (âncoras) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de introdução e resumo pessoal -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h1>Gustavo Henrique Schmitz</h1>
+            <h2>Software Developer</h2>
+            <div class="about-content">
+                <p>Olá! Meu nome é Gustavo Henrique Schmitz! Um Desenvolvedor de Software Full Stack e grande entusiasta nesse mundo da tecnologia, intrigado não só por seu desenvolvimento mas também por toda à pesquisa e inovação que a acompanham.</p>
+                <p>Como desenvolvedor, dedico-me à criação de softwares não só eficientes, mas inovadores. Sempre buscando aprender e me adaptar com as novidades do mercado.</p>
+                <p>Com minha abordagem valorizando boas práticas de desenvolvimento, como a escrita de códigos limpos, organizados e seguros, aplicados desde o planejamento até a entrega final. Sempre comprometido com a qualidade do produto, otimização do processo e a garantia de bons resultados.</p>
+                <p>E além de tudo isso, sou eficaz trabalhando tanto em equipe quanto de forma independente. Carregando habilidades como pensamento crítico, resolução de problemas, organização, adaptabilidade e boa comunicação. Estando sempre disposto a enfrentar novos desafios e contribuir com soluções que façam a diferença.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção que exibe a formação acadêmica e as competências técnicas -->
+    <section id="formacao" class="section bg-darker">
+        <div class="container">
+            <h2>Formação e Habilidades</h2>
+            
+            <div class="education-block">
+                <h3>Educação e Idiomas</h3>
+                <ul>
+                    <li><strong>Ensino Superior:</strong> Engenharia de Software (Cursando)</li>
+                    <li><strong>Idiomas:</strong> Português (Nativo), Inglês (Avançado)</li>
+                </ul>
+            </div>
+
+            <h3>Stack Tecnológico</h3>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="./public/icons/python.png" alt="Python" class="skill-icon">Python</div>
+                <div class="skill-card"><img src="./public/icons/golang.png" alt="Golang" class="skill-icon">Golang</div>
+                <div class="skill-card"><img src="./public/icons/nodejs.png" alt="Node.js" class="skill-icon">Node.js</div>
+                <div class="skill-card"><img src="./public/icons/typescript.png" alt="TypeScript" class="skill-icon">TypeScript</div>
+                <div class="skill-card"><img src="./public/icons/nestjs.png" alt="NestJS" class="skill-icon">NestJS</div>
+                <div class="skill-card"><img src="./public/icons/react.png" alt="React" class="skill-icon">React</div>
+                <div class="skill-card"><img src="./public/icons/nextjs.png" alt="Next.js" class="skill-icon">Next.js</div>
+                <div class="skill-card"><img src="./public/icons/postgresql.png" alt="PostgreSQL" class="skill-icon">PostgreSQL</div>
+                <div class="skill-card"><img src="./public/icons/mysql.png" alt="MySQL" class="skill-icon">MySQL</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de portfólio com cartões de projetos -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de Login</h3>
+                    <p>Desenvolvido com NestJS no back-end e NextJS no front-end. Foco em segurança e autenticação JWT.</p>
+                    <a href="https://github.com/GustavoHenriqueSchmitz/Login-System" target="_blank" class="btn">Ver Código</a>
+                </div>
+                <div class="project-card">
+                    <h3>Sistema de Chat</h3>
+                    <p>Projeto em Python utilizando protocolo socket para comunicação em tempo real via terminal.</p>
+                    <a href="https://github.com/GustavoHenriqueSchmitz/Chat-System" target="_blank" class="btn">Ver Código</a>
+                </div>
+                <div class="project-card">
+                    <h3>Classificador IRIS</h3>
+                    <p>Inteligência Artificial construída com Python e TensorFlow para classificação de espécies botânicas.</p>
+                    <a href="https://github.com/GustavoHenriqueSchmitz/AI-Iris-Flower-Classification" target="_blank" class="btn">Ver Código</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato com formulário -->
+    <section id="contato" class="section bg-darker">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Interessado em compartilhar algo, contratar meus serviços, ou simplesmente expandir seu networking? Eu adoraria ouvir de você! Fique à vontade para entrar em contato.</p>
+            <p>Preencha o formulário ao lado com seu nome, e-mail e mensagem. Se preferir outra maneira, você também pode me encontrar nas redes abaixo.</p>
+            
+            <!-- Formulário de contato -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gustavo Henrique Schmitz. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
